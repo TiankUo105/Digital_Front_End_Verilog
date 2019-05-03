@@ -54,6 +54,10 @@ module segment8(
 endmodule
 ```
 
-![test](https://qqadapt.qpic.cn/txdocpic/0/b8061fb0e0a1f6445b83103a75544400/0)
+![test](https://github.com/TiankUo105/Digital_Front_End_Verilog/raw/master/picture/译码器.png) 
 
 [https://blog.csdn.net/a1260157543/article/details/49227639](https://blog.csdn.net/a1260157543/article/details/49227639) 
+
+#### 5. 异步FIFO深度为17，如何设计地址格雷码？
+
+[http://www.cnblogs.com/aslmer/p/6114216.html](http://www.cnblogs.com/aslmer/p/6114216.html) 
