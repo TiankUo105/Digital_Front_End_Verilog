@@ -73,3 +73,10 @@ $readmemb中要求数据必须为二进制，$readmemh要求数据必须为十�
 
 #### 2. 用verilog实现串并变换。
 
+- 没研究出来，粘贴隔壁同学的，以后再好好学习。
+[https://blog.csdn.net/Reborn_Lee/article/details/89707184](https://blog.csdn.net/Reborn_Lee/article/details/89707184)
+
+#### 3. 记录一下第2题中用到的工具，包括工具版本，操作步骤或命令选项，遇到的错误，提示信息等。比较一下，与昨天的记录有何相同，有何不同。
+
+同上
+
