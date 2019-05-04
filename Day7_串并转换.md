@@ -32,4 +32,44 @@
 
 # 打卡day7
 
-#### 
+#### 1. 复习verilog语法【选做题】
+
+##### 1.1 文件操作fopen fdisplay fwrite fclose
+
+```verilog
+handlel = $fopen("file.txt");//打开文件
+$fdisplay(handlel,"%d",rand_num);//写数据
+$fwrite(handlel,"%d",reg1) ;//写入文件
+$fclose(handlel);//关闭文件
+```
+
+##### 1.2 生成随机数 random
+
+```verilog
+$random函数被调用时返回一个32bit的随机数，它是一个带符号的整形数
+rand = $random % 60;//给出了一个范围在－59到59之间的随机数。
+rand = {$random} % 60;//通过位并接操作产生一个值在0到59之间的数。
+rand = min+{$random} % (max-min+1);//产生一个在min, max之间随机数的例子。
+```
+
+##### 1.3 初始化 readmemh readmemb
+
+```verilog
+$readmemb("<数据文件名>",<存储器名>);
+$readmemb("<数据文件名>",<存储器名>,<起始地址>);
+$readmemb("<数据文件名>",<存储器名>,<起始地址>,<终止地址>);
+
+$readmemh("<数据文件名>",<存储器名>);
+$readmemh("<数据文件名>",<存储器名>,<起始地址>);
+$readmemh("<数据文件名>",<存储器名>,<起始地址>,<终止地址>);
+
+$readmemb中要求数据必须为二进制，$readmemh要求数据必须为十六进制
+```
+
+##### 1.4 finish stop
+
+- $stop：用于在仿真时，暂停仿真。运行到$stop的时候，仿真会暂停；此时可以在命令行输入run继续运行仿真。
+- $finish：仿真停止。运行到$finish的时候，仿真停止退出，此时不可以再继续运行
+
+#### 2. 用verilog实现串并变换。
+
