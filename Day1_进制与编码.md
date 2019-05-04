@@ -63,7 +63,7 @@ module segment8(
 endmodule
 ```
 
-![test](https://github.com/TiankUo105/Digital_Front_End_Verilog/raw/master/picture/译码器.png) 
+![译码器](https://github.com/TiankUo105/Digital_Front_End_Verilog/tree/master/picture/day1/译码器.png) 
 
 [https://blog.csdn.net/a1260157543/article/details/49227639](https://blog.csdn.net/a1260157543/article/details/49227639) 
 
