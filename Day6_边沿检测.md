@@ -121,6 +121,6 @@ endmodule // tb
 
 edaplayground：VCS+EPWave
 
-![边沿检测sim](https://github.com/TiankUo105/Digital_Front_End_Verilog/blob/master/picture/day3/边沿检测sim.png)
+![边沿检测sim](https://github.com/TiankUo105/Digital_Front_End_Verilog/blob/master/picture/day6/边沿检测sim.png)
 
 
