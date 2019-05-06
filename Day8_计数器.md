@@ -62,7 +62,7 @@ endmodule
 // Code your testbench here
 // or browse Examples
 `timescale 1ns/1ps
-module tb();
+module cnt_tb();
   reg clk,
       rst_n;
 
@@ -75,7 +75,8 @@ module tb();
   
   initial begin
     rst_n = 1'b0;
-    #22 rst_n = 1'b1;
+    #40 rst_n = 1'b1;
+    #100 rst_n = 1'b0;
   end
   
   
