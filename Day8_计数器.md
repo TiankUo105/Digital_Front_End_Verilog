@@ -27,6 +27,73 @@ output [3:0] o_cnt;
   - [https://blog.csdn.net/chriscb/article/details/77097548](https://blog.csdn.net/chriscb/article/details/77097548)
   - [https://blog.csdn.net/wordwarwordwar/article/details/74091757](https://blog.csdn.net/wordwarwordwar/article/details/74091757)
 
+~~~verilog
+// Code your design here
+module cnt2s_4bit(
+    input clk, rst_n,
+    output [3:0] o_cnt
+    );
+  reg [3:0] cnt;
+//异步复位
+/* always @ (posedge clk or negedge rst_n) begin
+    if ( !rst_n )
+        cnt <= 4'b0000;
+    else if ( cnt == 4'b1111 )
+        cnt <= 4'b0000;
+    else
+        cnt <= cnt + 1'b1;
+end */
+//同步复位
+always @ (posedge clk) begin
+    if ( !rst_n )
+        cnt <= 4'b0000;
+    else if ( cnt == 4'b1111 )
+        cnt <= 4'b0000;
+    else
+        cnt <= cnt + 1'b1;
+end
+
+assign o_cnt = cnt;
+
+endmodule
+~~~
+
+~~~verilog
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/1ps
+module tb();
+  reg clk,
+      rst_n;
+
+  wire [3:0] o_cnt;
+
+  initial begin
+    clk = 0;
+    forever #10 clk = ~clk;
+  end
+  
+  initial begin
+    rst_n = 1'b0;
+    #22 rst_n = 1'b1;
+  end
+  
+  
+  initial begin
+    $dumpfile("tb.vcd");
+    $dumpvars();
+  end
+  
+  cnt2s_4bit cnt2s_4bit_t
+    (// Outputs
+      .o_cnt    (o_cnt),
+     // Inputs
+     .clk     (clk),
+      .rst_n     (rst_n));
+
+  
+endmodule // tb
+~~~
 
 
 #### 2. 用verilog实现4bit约翰逊(Johnson)计数器。
