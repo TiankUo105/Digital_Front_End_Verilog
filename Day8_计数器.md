@@ -70,13 +70,15 @@ module cnt_tb();
 
   initial begin
     clk = 0;
-    forever #10 clk = ~clk;
+    forever #2 clk = ~clk;
   end
   
   initial begin
     rst_n = 1'b0;
-    #40 rst_n = 1'b1;
+    #10 rst_n = 1'b1;
     #100 rst_n = 1'b0;
+    #40
+    $finish;
   end
   
   
