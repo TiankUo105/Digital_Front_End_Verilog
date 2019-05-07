@@ -4,5 +4,9 @@
 
 # 打卡day9
 #### 1. 用verilog实现按键抖动消除电路，抖动小于15ms，输入时钟12MHz。
-- 
+- 按键抖动消除电路的实现：按键状态变化后，会有带来抖动的时间，电路只读取状态变化的值，对后续的抖动值不做处理。是一个边沿检测器和计数器的组合。
+- 输入时钟12MHz:在写testbench时，如果设定`timescale 1ns/100ps，既单位时间是1ns，always #41 clk=~clk 表示每41ns后，clk翻转一次，clk信号就变成一个方波信号，周期为82ns，约等于clk为周期是12M的方波信号。
+
+- 在网上找了一些参考[https://www.cnblogs.com/qingkai/p/7596126.html](https://www.cnblogs.com/qingkai/p/7596126.html)
+
 #### 2. 记录题目1中用到的工具，操作步骤，遇到的错误和提示信息。
