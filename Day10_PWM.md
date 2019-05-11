@@ -15,8 +15,8 @@ module Breath_LED(
 );
 
 parameter   DELAY24 = 24;
-parameter   DELAY1000 = 1000;
-//parameter   DELAY1000 = 10;//just test
+//parameter   DELAY1000 = 1000;
+parameter   DELAY1000 = 10;//just test
 
 
 wire            delay_1us;
