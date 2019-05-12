@@ -118,7 +118,7 @@ module Breath_LED_tb();
   initial begin
     rst_n = 1'b0;
     #42 rst_n = 1'b1;
-    #1_000_000
+    #3_000_00
     $finish;
   end
   
