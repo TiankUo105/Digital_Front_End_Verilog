@@ -12,9 +12,9 @@
   - testbench：基本上有一个套路，没太大问题的话下面这个模板就可以用。
   ~~~verilog
   // Code your testbench here
-// or browse Examples
-`timescale 1ns/1ns
-module XX_tb();
+  // or browse Examples
+  `timescale 1ns/1ns
+  module XX_tb();
   reg clk,
       rst_n;
 
@@ -48,5 +48,5 @@ module XX_tb();
       .rst_n     (rst_n));
 
   
-endmodule // tb
+  endmodule // tb
   ~~~
